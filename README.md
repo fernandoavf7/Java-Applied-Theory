@@ -4,7 +4,7 @@ Here I practice the basic and advanced Java theory such as:
 - primitive data types
 - enums
 - constructors
-- destructos
+- destructors
 - encapsulation
 - inheritance
 - polymorphism
