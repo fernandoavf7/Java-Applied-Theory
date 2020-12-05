@@ -1,5 +1,5 @@
 # Java-Applied-Theory
-Here I practice the basic and advance Java theory such as:
+Here I practice the basic and advanced Java theory such as:
 
 - primitive data types
 - enums
