@@ -4,11 +4,21 @@ import com.mushroomstudios.applied_theory.Enums.Unit;
 import com.mushroomstudios.applied_theory.constructors.Sphere;
 import com.mushroomstudios.applied_theory.encapsulation.Cube;
 import com.mushroomstudios.applied_theory.inheritance.CarbonCube;
+import com.mushroomstudios.applied_theory.multithreading.ThreadOne;
+import com.mushroomstudios.applied_theory.multithreading.ThreadTwo;
+import com.mushroomstudios.applied_theory.overload.BubbleSortOverloaded;
 import com.mushroomstudios.applied_theory.polymorphism.MetalCube;
+import com.mushroomstudios.applied_theory.singleton.Singleton;
+import com.mushroomstudios.applied_theory.sorting.BubbleSort;
+import com.mushroomstudios.applied_theory.sorting.HeapSort;
+import com.mushroomstudios.applied_theory.sorting.InsertionSort;
+import com.mushroomstudios.applied_theory.sorting.MergeSort;
+import com.mushroomstudios.applied_theory.sorting.QuickSort;
 
 /**
+ * This code was developed by Fernando Vera.
+ * 
  * You can have more main methods for proyect, but you have to choose which run
- *
  */
 public class App {
 	/* you can try the classes here, print that you want! */
@@ -27,7 +37,7 @@ public class App {
 		cube.setHeight(150);
 		cube.setWidth(150);
 		System.out.print(cube.toString());
-		System.out.println(" "+cube.getCubeType());
+		System.out.println(" " + cube.getCubeType());
 
 		// inheritance test
 		CarbonCube carbonCube = new CarbonCube();
@@ -41,5 +51,105 @@ public class App {
 		// polymorphism test
 		MetalCube metalCube = new MetalCube();
 		System.out.println(metalCube.getCubeType());
-	}
-}
+		System.out.println("\n");
+
+		// singleton
+		// instantiating Singleton class with variable x
+		Singleton x = Singleton.getInstance();
+		// instantiating Singleton class with variable y
+		Singleton y = Singleton.getInstance();
+		// instantiating Singleton class with variable z
+		Singleton z = Singleton.getInstance();
+		// changing variable of instance x
+		x.s = (x.s).toUpperCase();
+		x.i = 99;
+
+		System.out.println("String from x is " + x.s);
+		System.out.println("String from y is " + y.s);
+		System.out.println("String from z is " + z.s);
+		System.out.println("int from x is " + x.i);
+		System.out.println("\n");
+		// changing variable of instance z
+		z.s = (z.s).toLowerCase();
+
+		System.out.println("String from x is " + x.s);
+		System.out.println("String from y is " + y.s);
+		System.out.println("String from z is " + z.s);
+		System.out.println("\n");
+
+		// Bubble sort method
+		int integerArray[] = { 3, 60, 35, 2, 45, 320, 5 };
+		System.out.println("integerArray before Bubble Sort");
+		for (int i = 0; i < integerArray.length; i++) {
+			System.out.print(integerArray[i] + " ");
+		}
+		System.out.println("\n");
+		System.out.println("integerArray after Bubble Sort");
+		BubbleSort.sort(integerArray);
+		for (int i = 0; i < integerArray.length; i++) {
+			System.out.print(integerArray[i] + " ");
+		}
+		System.out.println("\n");
+
+		// insertion sort
+		int integerArray2[] = { 3, 60, 35, 2, 45, 320, 5 };
+		System.out.println("integerArray2 after Insertion Sort");
+		InsertionSort.sort(integerArray2);
+		for (int i = 0; i < integerArray2.length; i++) {
+			System.out.print(integerArray2[i] + " ");
+		}
+		System.out.println("\n");
+
+		// Quick sort
+		int integerArray3[] = { 3, 60, 35, 2, 45, 320, 5 };
+		System.out.println("integerArray3 after Quick Sort");
+		QuickSort.sort(integerArray3, 0, integerArray3.length - 1);
+		for (int i = 0; i < integerArray3.length; i++) {
+			System.out.print(integerArray3[i] + " ");
+		}
+		System.out.println("\n");
+
+		// Heap sort
+		int integerArray4[] = { 3, 60, 35, 2, 45, 320, 5 };
+		System.out.println("integerArray4 after Heap Sort");
+		HeapSort.sort(integerArray4);
+		for (int i = 0; i < integerArray4.length; i++) {
+			System.out.print(integerArray4[i] + " ");
+		}
+		System.out.println("\n");
+
+		// Merge sort
+		int integerArray5[] = { 3, 60, 35, 2, 45, 320, 5 };
+		System.out.println("integerArray5 after Merge Sort");
+		MergeSort.sort(integerArray5, 0, integerArray5.length - 1);
+		for (int i = 0; i < integerArray5.length; i++) {
+			System.out.print(integerArray5[i] + " ");
+		}
+		System.out.println("\n");
+
+		// test overload for bubblesort with float, we call same method and java
+		// select the correct one
+		float floatArray[] = { 3.9f, 60f, 35.99f, 27.945f, 45f, 320.3459f, -78.7f, 9f };
+		System.out.println("floatArray before Bubble Sort");
+		for (int i = 0; i < floatArray.length; i++) {
+			System.out.print(floatArray[i] + " ");
+		}
+		System.out.println("\n");
+		System.out.println("floatArray after Bubble Sort");
+		BubbleSortOverloaded.sort(floatArray);
+		for (int i = 0; i < floatArray.length; i++) {
+			System.out.print(floatArray[i] + " ");
+		}
+		System.out.println("\n");
+
+		// Multithreading
+		ThreadOne t1 = new ThreadOne();
+		Thread thread1 = new Thread(t1);
+		thread1.start();
+
+		ThreadTwo t2 = new ThreadTwo();
+		t2.start();
+		System.out.println("\n");
+
+	}// end main
+}// end class
