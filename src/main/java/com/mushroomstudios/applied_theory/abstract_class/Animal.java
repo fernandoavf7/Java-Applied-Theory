@@ -22,5 +22,4 @@ public abstract class Animal {
 	public String wakeUp() {
 		return "!!!";
 	}
-	
 }

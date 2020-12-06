@@ -7,6 +7,7 @@ import com.mushroomstudios.applied_theory.constructors.Sphere;
 import com.mushroomstudios.applied_theory.encapsulation.Cube;
 import com.mushroomstudios.applied_theory.example_classes.Dog;
 import com.mushroomstudios.applied_theory.inheritance.CarbonCube;
+import com.mushroomstudios.applied_theory.inner_outter_class.OuterClass;
 import com.mushroomstudios.applied_theory.multithreading.ThreadOne;
 import com.mushroomstudios.applied_theory.multithreading.ThreadTwo;
 import com.mushroomstudios.applied_theory.overload.BubbleSortOverloaded;
@@ -133,15 +134,23 @@ public class App {
 		ThreadOne t1 = new ThreadOne();
 		Thread thread1 = new Thread(t1);
 		thread1.start();
+		System.out.println("\n");
 
 		ThreadTwo t2 = new ThreadTwo();
 		t2.start();
 		System.out.println("\n");
-		
-		//Abstract class implementation example
+
+		// Abstract class implementation example
 		Dog dog = new Dog();
-		//System.out.println("This is an class inherited from an abstract class, it's a dog and makes: "+dog.animalSound());
-		//System.out.println("\n");
+		System.out.println(
+				"This is an class inherited from an abstract class, it's a dog and makes: " + dog.animalSound());
+		System.out.println("\n");
+
+		// Outter and Inner class
+		OuterClass myOuter = new OuterClass();
+		//to access to inner class method form another class, it should be public
+		OuterClass.InnerClass myInner = myOuter.new InnerClass();
+		System.out.println("Outter and Inner class variable multiply is: "+myInner.multiply(myOuter.outterInt, myInner.innerInt));
 
 	}// end main
 
@@ -150,7 +159,8 @@ public class App {
 			System.out.print(array[i] + " ");
 		}
 	}
-	//method overloaded
+
+	// method overloaded
 	private static void printArray(float[] array) {
 		for (int i = 0; i < array.length; i++) {
 			System.out.print(array[i] + " ");
