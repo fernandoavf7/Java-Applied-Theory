@@ -8,10 +8,12 @@ import com.mushroomstudios.applied_theory.encapsulation.Cube;
 import com.mushroomstudios.applied_theory.example_classes.Dog;
 import com.mushroomstudios.applied_theory.inheritance.CarbonCube;
 import com.mushroomstudios.applied_theory.inner_outter_class.OuterClass;
+import com.mushroomstudios.applied_theory.interfaces.MyCar;
 import com.mushroomstudios.applied_theory.multithreading.ThreadOne;
 import com.mushroomstudios.applied_theory.multithreading.ThreadTwo;
 import com.mushroomstudios.applied_theory.overload.BubbleSortOverloaded;
 import com.mushroomstudios.applied_theory.polymorphism.MetalCube;
+import com.mushroomstudios.applied_theory.recursion.Recursion;
 import com.mushroomstudios.applied_theory.singleton.Singleton;
 import com.mushroomstudios.applied_theory.sorting.BubbleSort;
 import com.mushroomstudios.applied_theory.sorting.HeapSort;
@@ -22,6 +24,7 @@ import com.mushroomstudios.applied_theory.sorting.QuickSort;
 /**
  * This code was developed by Fernando Vera.
  * 
+ * the examples are splitted by packages and the example of use is showed here in the App.main
  * You can have more main methods for proyect, but you have to choose which run
  */
 public class App {
@@ -151,7 +154,25 @@ public class App {
 		//to access to inner class method form another class, it should be public
 		OuterClass.InnerClass myInner = myOuter.new InnerClass();
 		System.out.println("Outter and Inner class variable multiply is: "+myInner.multiply(myOuter.outterInt, myInner.innerInt));
-
+		System.out.println("\n");
+		
+		//Recursion
+		int recursiveTest = 10;
+		recursiveTest = Recursion.sum(10);
+		System.out.println("recursive test finished in: "+ recursiveTest);
+		System.out.println("\n");
+		
+		//Interface test
+		MyCar veraCar = new MyCar();
+		veraCar.start();
+		System.out.println("current Speed: "+veraCar.currentSpeed);
+		veraCar.speedUp();
+		veraCar.speedUp();
+		veraCar.speedUp();
+		veraCar.speedDown();
+		System.out.println("current Speed: "+veraCar.currentSpeed);
+		
+		
 	}// end main
 
 	private static void printArray(int[] array) {
