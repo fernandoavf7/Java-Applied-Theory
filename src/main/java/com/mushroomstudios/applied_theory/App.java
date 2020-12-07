@@ -21,6 +21,7 @@ import com.mushroomstudios.applied_theory.multithreading.ThreadTwo;
 import com.mushroomstudios.applied_theory.overload.BubbleSortOverloaded;
 import com.mushroomstudios.applied_theory.polymorphism.MetalCube;
 import com.mushroomstudios.applied_theory.recursion.Recursion;
+import com.mushroomstudios.applied_theory.regex.Regex;
 import com.mushroomstudios.applied_theory.sorting.BubbleSort;
 import com.mushroomstudios.applied_theory.sorting.HeapSort;
 import com.mushroomstudios.applied_theory.sorting.InsertionSort;
@@ -216,6 +217,11 @@ public class App {
 		jump();
 		errorCatched.checkAge(20);
 
+		//Regular Expressions
+		Regex regs = new Regex();
+		jump();
+		
+		regs.getOnlyNumbers();
 	}// end main
 
 	private static void printArray(int[] array) {
