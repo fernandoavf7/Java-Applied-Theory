@@ -1,4 +1,4 @@
-package com.mushroomstudios.applied_theory.singleton;
+package com.mushroomstudios.applied_theory.design_patterns;
 
 public class Singleton {
 	/*

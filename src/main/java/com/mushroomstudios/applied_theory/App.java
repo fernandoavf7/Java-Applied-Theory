@@ -4,6 +4,7 @@ import java.awt.dnd.peer.DragSourceContextPeer;
 
 import com.mushroomstudios.applied_theory.Enums.Unit;
 import com.mushroomstudios.applied_theory.constructors.Sphere;
+import com.mushroomstudios.applied_theory.design_patterns.Singleton;
 import com.mushroomstudios.applied_theory.encapsulation.Cube;
 import com.mushroomstudios.applied_theory.example_classes.Dog;
 import com.mushroomstudios.applied_theory.exceptions.ErrorCatched;
@@ -20,7 +21,6 @@ import com.mushroomstudios.applied_theory.multithreading.ThreadTwo;
 import com.mushroomstudios.applied_theory.overload.BubbleSortOverloaded;
 import com.mushroomstudios.applied_theory.polymorphism.MetalCube;
 import com.mushroomstudios.applied_theory.recursion.Recursion;
-import com.mushroomstudios.applied_theory.singleton.Singleton;
 import com.mushroomstudios.applied_theory.sorting.BubbleSort;
 import com.mushroomstudios.applied_theory.sorting.HeapSort;
 import com.mushroomstudios.applied_theory.sorting.InsertionSort;
@@ -211,7 +211,7 @@ public class App {
 		errorCatched.catchGenericError();
 		jump();
 		
-		//Throws exceptions
+		//Throws exceptions, (for prevent stop, error was catched)
 		errorCatched.checkAge(7);
 		jump();
 		errorCatched.checkAge(20);
