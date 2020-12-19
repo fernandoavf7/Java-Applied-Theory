@@ -10,10 +10,9 @@ Here I practice the basic and advanced Java theory such as:
 - toString Overrided method
 - Sorting Methods: bubble sort, insertion sort, quick sort, heap sort and merge sort.
 - multithreading
-
-*not yet
-- Abstract class
+- abstract class
 - interface
+- regular expresions
 
 Design patterns:
 
