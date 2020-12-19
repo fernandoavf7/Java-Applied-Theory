@@ -222,6 +222,7 @@ public class App {
 		jump();
 		
 		regs.getOnlyNumbers();
+		jump();
 	}// end main
 
 	private static void printArray(int[] array) {

@@ -36,7 +36,7 @@ public class Regex {
 	 */
 	public void getOnlyNumbers() {
 		// String to be scanned to find the pattern.
-		String text = "This order was placed for SKU894722 in 09/12/2012";
+		String text = "This order was placed for SKU894722";
 				
 		Pattern pattern = Pattern.compile("-?\\d+");
 		Matcher matcher = pattern.matcher(text);
