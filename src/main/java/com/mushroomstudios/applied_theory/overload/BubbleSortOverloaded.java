@@ -4,7 +4,7 @@ import com.mushroomstudios.applied_theory.sorting.BubbleSort;
 
 /*
  * Here we have the bubble sort method and we are going to overload method 
- * to accept float.
+ * to accept float and double with the same method name, java choose which method will be used.
  * 
  * About bubble sorting. Is a method that order comparing the adyacents numbers from first
  * to last number, first with second, second with third, third with fourth, etc
@@ -17,12 +17,29 @@ import com.mushroomstudios.applied_theory.sorting.BubbleSort;
  */
 
 //for the overload example this inherit from BubbleSort Class from sorting package
-public class BubbleSortOverloaded extends BubbleSort{
+public class BubbleSortOverloaded extends BubbleSort {
 
-	//this is used for float array, java auto select method depends you send
+	// this is used for float array, java auto select method depends you send
 	public static void sort(float[] arr) {
 		float n = arr.length;
 		float temp = 0;
+		for (int i = 0; i < n; i++) {
+			for (int j = 1; j < (n - i); j++) {
+				if (arr[j - 1] > arr[j]) {
+					// swap elements
+					temp = arr[j - 1];
+					arr[j - 1] = arr[j];
+					arr[j] = temp;
+				}
+
+			}
+		}
+	}
+
+	// this is used for double array, java auto select method depends you send
+	public static void sort(double[] arr) {
+		double n = arr.length;
+		double temp = 0;
 		for (int i = 0; i < n; i++) {
 			for (int j = 1; j < (n - i); j++) {
 				if (arr[j - 1] > arr[j]) {

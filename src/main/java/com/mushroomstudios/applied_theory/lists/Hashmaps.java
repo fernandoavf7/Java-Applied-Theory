@@ -1,6 +1,7 @@
 package com.mushroomstudios.applied_theory.lists;
 
 import java.util.HashMap;
+import java.util.Map;
 
 /*
  * In the ArrayList chapter, you learned that Arrays store items as an ordered collection, 
@@ -22,7 +23,7 @@ public class Hashmaps {
 		capitalCities.put("Germany", "Berlin");
 		capitalCities.put("Norway", "Oslo");
 		capitalCities.put("USA", "Washington DC");
-		//System.out.println(capitalCities);
+		// System.out.println(capitalCities);
 
 		// common methods
 		capitalCities.get("England");
@@ -32,25 +33,40 @@ public class Hashmaps {
 
 		// Print keys
 		for (String i : capitalCities.keySet()) {
-			//System.out.println(i);
+			// System.out.println(i);
 		}
 
 		// Print values
 		for (String i : capitalCities.values()) {
-			//System.out.println(i);
+			// System.out.println(i);
 		}
 
 		// Print keys and values
 		for (String i : capitalCities.keySet()) {
-			//System.out.println("key: " + i + " value: " + capitalCities.get(i));
+			// System.out.println("key: " + i + " value: " + capitalCities.get(i));
 		}
 
 		// Create a HashMap object called people
 		HashMap<String, Integer> people = new HashMap<String, Integer>();
 	}
-	
+
 	public void printList() {
 		System.out.println(capitalCities);
+	}
+
+	public static void main(String args[]) {
+		Map<String, Integer> places = new HashMap<String, Integer>();
+		places.put("Chile", 1);
+		places.put("Argentina", 2);
+		places.put("Bolivia", 3);
+		places.put("Chile", 4);
+		System.out.println(places);
+		System.out.println(places.size());
+
+		/*
+		 * in ths example we can see how the key is important and the original value to
+		 * chile was overwritten by the last value
+		 */
 	}
 
 }
